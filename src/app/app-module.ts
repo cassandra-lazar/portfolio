@@ -26,6 +26,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
+import { AnimatedBackgroundComponent } from './shared/components/animated-background/animated-background.component';
 
 
 const PRIME_MODULES = [
@@ -53,6 +54,7 @@ const PRIME_MODULES = [
     ProjectsComponent,
     ContactComponent,
     HeaderComponent,
+    AnimatedBackgroundComponent
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,9 @@
     "primeicons": "^7.0.0",
     "primeng": "^20.0.1",
     "rxjs": "~7.8.0",
+    "three": "^0.179.0",
     "tslib": "^2.3.0",
+    "vanta": "^0.5.24",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
