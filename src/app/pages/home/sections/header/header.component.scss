@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  background-color: #111;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li {
+  color: #ccc;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.nav-list li.active {
+  color: white;
+  background: radial-gradient(circle at bottom, #a200ff3d, #00000000);
+  box-shadow: inset 0 0 0 #a100ff55, 0 0 10px #a100ff;
+}

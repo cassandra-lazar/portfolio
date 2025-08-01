@@ -1,1 +1,9 @@
-<p>header works!</p>
+<nav class="navbar">
+    <ul class="nav-list">
+      <li [class.active]="activeSection === 'about'"><a href="#about">About</a></li>
+      <li [class.active]="activeSection === 'skills'"><a href="#skills">Skills</a></li>
+      <li [class.active]="activeSection === 'projects'"><a href="#projects">Projects</a></li>
+      <li [class.active]="activeSection === 'contact'"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  

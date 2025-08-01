@@ -42,7 +42,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/bootstrap-overrides.scss",
+              "src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -58,7 +61,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": true
             },
             "development": {
               "optimization": false,
@@ -75,6 +79,7 @@
               "buildTarget": "portfolio:build:production"
             },
             "development": {
+              
               "buildTarget": "portfolio:build:development"
             }
           },
