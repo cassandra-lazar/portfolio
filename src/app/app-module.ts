@@ -29,7 +29,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { AnimatedBackgroundComponent } from './shared/components/animated-background/animated-background.component';
 import { GlowCardComponent } from './shared/components/glow-card/glow-card.component';
 import { HeroComponent } from './pages/home/sections/hero/hero.component';
-
+import { CopyToClipboardDirective } from './shared/directives/copy-to-clipboard.directive';
 
 const PRIME_MODULES = [
   ButtonModule,
@@ -44,7 +44,7 @@ const PRIME_MODULES = [
   ScrollTopModule,
   TooltipModule,
   RippleModule,
-  ProgressBarModule
+  ProgressBarModule,
 ];
 
 @NgModule({
@@ -58,7 +58,8 @@ const PRIME_MODULES = [
     HeaderComponent,
     AnimatedBackgroundComponent,
     GlowCardComponent,
-    HeroComponent
+    HeroComponent,
+    CopyToClipboardDirective,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +67,7 @@ const PRIME_MODULES = [
     AppRoutingModule,
     ...PRIME_MODULES,
   ],
+  exports: [CopyToClipboardDirective],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideAnimationsAsync(),
@@ -73,7 +75,7 @@ const PRIME_MODULES = [
       theme: {
         preset: Aura,
         options: {
-          darkModeSelector: false || 'none'
+          darkModeSelector: false || 'none',
         },
       },
     }),
