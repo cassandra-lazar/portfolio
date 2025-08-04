@@ -28,6 +28,7 @@ import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { AnimatedBackgroundComponent } from './shared/components/animated-background/animated-background.component';
 import { GlowCardComponent } from './shared/components/glow-card/glow-card.component';
+import { HeroComponent } from './pages/home/sections/hero/hero.component';
 
 
 const PRIME_MODULES = [
@@ -56,7 +57,8 @@ const PRIME_MODULES = [
     ContactComponent,
     HeaderComponent,
     AnimatedBackgroundComponent,
-    GlowCardComponent
+    GlowCardComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
