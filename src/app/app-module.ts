@@ -30,6 +30,7 @@ import { AnimatedBackgroundComponent } from './shared/components/animated-backgr
 import { GlowCardComponent } from './shared/components/glow-card/glow-card.component';
 import { HeroComponent } from './pages/home/sections/hero/hero.component';
 import { CopyToClipboardDirective } from './shared/directives/copy-to-clipboard.directive';
+import { TitleComponent } from './shared/components/title/title.component';
 
 const PRIME_MODULES = [
   ButtonModule,
@@ -60,6 +61,7 @@ const PRIME_MODULES = [
     GlowCardComponent,
     HeroComponent,
     CopyToClipboardDirective,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

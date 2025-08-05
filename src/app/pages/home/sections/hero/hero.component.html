@@ -3,7 +3,8 @@
     <h1 class="name">
       {{ name }}
     </h1>
-    <h2 class="role">{{ role }}</h2>
+    <h2 class="role"><i class="pi pi-briefcase me-2"></i>{{ role }}</h2>
+
     <p class="location"><i class="pi pi-map-marker"></i> {{ location }}</p>
     <div class="email">{{ email }}
       <span [appCopyToClipboard]="email"></span>
