@@ -1,3 +1,5 @@
+@import "../../../../../assets/variables.scss";
+
 .hero-container {
   height: 100vh;
   display: flex;
@@ -45,7 +47,7 @@
 
 .role {
   font-size: 1.7rem;
-  color: #f6f662;
+  color: $blue;
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -55,41 +57,6 @@
   color: #fff;
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-.hero-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-btn.linkedin {
-  background-color: #0a66c2;
-  color: white;
-  transition: all 0.3s ease;
-  z-index: 1;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(172, 180, 255, 0.881);
-  }
-}
-
-.hero-btn.cv {
-  background: linear-gradient(10deg, #98ff98, #bb86fc);
-  color: #000;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  z-index: 1;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgb(197, 140, 254);
-  }
 }
 
 .email {

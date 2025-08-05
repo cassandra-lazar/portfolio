@@ -47,7 +47,9 @@ export class CopyToClipboardDirective implements OnInit {
           }
 
           .copy-icon:hover {
-            color: #98ff98;
+            color: #f6f662;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(172, 180, 255, 0.881);
           }
         `)
       );
