@@ -31,6 +31,8 @@ import { GlowCardComponent } from './shared/components/glow-card/glow-card.compo
 import { HeroComponent } from './pages/home/sections/hero/hero.component';
 import { CopyToClipboardDirective } from './shared/directives/copy-to-clipboard.directive';
 import { TitleComponent } from './shared/components/title/title.component';
+import { Timeline } from 'primeng/timeline';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 const PRIME_MODULES = [
   ButtonModule,
@@ -46,6 +48,8 @@ const PRIME_MODULES = [
   TooltipModule,
   RippleModule,
   ProgressBarModule,
+  Timeline,
+  AnimateOnScrollModule 
 ];
 
 @NgModule({

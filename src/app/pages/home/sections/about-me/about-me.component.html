@@ -1,18 +1,42 @@
-<section id="about-me" class="container">
-  <div class="text-center mb-5">
-    <app-title>About</app-title>
-  </div>
+<section id="about" class="container">
+  <section id="description">
+    <div class="text-center mb-5">
+      <app-title>About</app-title>
+    </div>
 
-  <div class="description">
-    <div>
-      <p class="intro">
-        I'm <span class="highlight">Cassandra Lazar</span>, a frontend developer
-        passionate about crafting intuitive and elegant user experiences using
-        <strong>Angular</strong> and modern web technologies.
-      </p>
+    <div class="description">
+      <div>
+        <p class="intro">
+          I'm <span class="highlight">Cassandra Lazar</span>, a frontend
+          developer passionate about crafting intuitive and elegant user
+          experiences using <strong>Angular</strong> and modern web
+          technologies.
+        </p>
+      </div>
+      <div class="profile-pic">
+        <img
+          class="img-fluid"
+          src="images/profile-pic.png"
+          alt="Cassandra Lazar"
+        />
+      </div>
     </div>
-    <div class="profile-pic">
-      <img class="img-fluid" src="images/profile-pic.png" alt="Cassandra Lazar" />
+  </section>
+
+  <section id="education" class="mt-5">
+    <div class="text-start mb-5">
+      <app-title>Education</app-title>
     </div>
-  </div>
+    <div class="timeline">
+      @for (edu of education; track edu.title) {
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">{{ edu.year }}</span>
+          <h3>{{ edu.title }}</h3>
+          <p>{{ edu.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
 </section>
