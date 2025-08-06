@@ -1,0 +1,42 @@
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+}
+
+.intro {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #98ff98;
+  font-weight: 600;
+}
+
+.profile-pic {
+  img {
+    border-radius: 10%;
+    border: 3px solid #98ff98;
+    box-shadow: 0 0 20px #98ff9870;
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
