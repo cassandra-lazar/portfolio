@@ -24,4 +24,26 @@ export class AboutMeComponent {
       description: 'Mathematics and Informatics',
     },
   ];
+
+  experience = [
+    {
+      title: 'Frontend Developer',
+      period: 'Jan 2022 – Sep 2024',
+      description:
+        'Leading frontend modules in Angular, building reusable components, custom directives and maintaining design consistency.',
+    },
+
+    {
+      title: 'Junior Frontend Developer',
+      period: 'Oct 2020 – Jul 2022',
+      description:
+        'Built small modules in Angular, worked on responsive layouts, started using SCSS and animations.',
+    },
+    {
+      title: 'Intern Developer',
+      period: 'Jul 2020 – Oct 2020',
+      description:
+        'Introduced to Angular framework, helped with UI bugfixing and learned Git basics.',
+    },
+  ];
 }

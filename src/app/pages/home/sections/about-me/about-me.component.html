@@ -31,12 +31,28 @@
       @for (edu of education; track edu.title) {
       <div class="timeline-item">
         <div class="timeline-content">
-          <span class="timeline-date">{{ edu.year }}</span>
           <h3>{{ edu.title }}</h3>
+          <span class="timeline-date">{{ edu.year }}</span>
           <p>{{ edu.description }}</p>
         </div>
       </div>
       }
+    </div>
+  </section>
+
+  <section id="experience" class="mt-5">
+    <div class="text-end mb-5">
+      <app-title>Experience</app-title>
+    </div>
+    <div class="experience-box">
+      <h2 class="company-name">🏢 Mindit</h2>
+      <div class="experience-role" *ngFor="let role of experience">
+        <div class="header">
+          <h3 class="title">{{ role.title }}</h3>
+          <span class="period">{{ role.period }}</span>
+          <p class="description">{{ role.description }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </section>
