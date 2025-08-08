@@ -1,1 +1,21 @@
-<p>skills works!</p>
+<section id="skills" class="mt-5">
+  <div class="text-center mb-5">
+    <app-title>Skills</app-title>
+  </div>
+
+  <section class="skills">
+    @for (category of skills; track category.title) {
+    <div class="skills-category">
+      <h3>{{ category.title }}</h3>
+      <div class="skills-grid">
+        @for (skill of category.items; track skill.name) {
+        <div class="skill-item">
+          <img [src]="skill.logo" [alt]="skill.name" />
+          <span>{{ skill.name }}</span>
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </section>
+</section>

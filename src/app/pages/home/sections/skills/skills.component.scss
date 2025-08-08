@@ -1,0 +1,47 @@
+.skills {
+  .skills-category {
+    margin-bottom: 2rem;
+
+    h3 {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .skill-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      min-width: 130px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+
+      span {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      &:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 0 15px rgba(116, 255, 167, 0.6);
+      }
+    }
+  }
+}
