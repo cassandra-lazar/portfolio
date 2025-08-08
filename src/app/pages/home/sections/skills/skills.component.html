@@ -3,7 +3,7 @@
     <app-title>Skills</app-title>
   </div>
 
-  <section class="skills">
+  <div class="skills">
     @for (category of skills; track category.title) {
     <div class="skills-category">
       <h3>{{ category.title }}</h3>
@@ -17,5 +17,21 @@
       </div>
     </div>
     }
-  </section>
+  </div>
+
+  <div class="skills-banner">
+    <div class="slider">
+      <div class="slide-track">
+        @for (skill of allLogos; track skill.name) {
+        <div class="slide">
+          <img [src]="skill.logo" [alt]="skill.name" />
+        </div>
+        } @for (skill of allLogos; track skill.name + '-duplicate') {
+        <div class="slide">
+          <img [src]="skill.logo" [alt]="skill.name" />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
 </section>

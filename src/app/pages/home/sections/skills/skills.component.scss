@@ -45,3 +45,50 @@
     }
   }
 }
+
+.skills-banner {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+
+    .slide-track {
+      display: flex;
+      width: calc(200px * 20 * 2);
+      animation: scroll 30s linear infinite;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      img {
+        width: 60px;
+        height: auto;
+        filter: brightness(0) invert(1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
