@@ -1,1 +1,51 @@
-<p>contact works!</p>
+<section id="contact" class="container my-5">
+  <div class="text-center mb-5">
+    <app-title>Contact</app-title>
+  </div>
+
+  <section>
+    <div class="contact-section">
+      <div class="contact-info">
+        <h3>Get in touch</h3>
+
+        <div class="d-flex">
+          <p><strong>Email:</strong></p>
+          <div class="email">{{ email }}
+            <span [appCopyToClipboard]="email"></span>
+          </div>
+        </div>
+        <p><strong>Phone:</strong> +40 123 456 789</p>
+        <p><strong>Location:</strong> Bucharest, Romania</p>
+        <div class="social-icons">
+          <a href="#"><i class="pi pi-linkedin"></i></a>
+          <a href="#"><i class="pi pi-github"></i></a>
+          <a href="#"><i class="pi pi-facebook"></i></a>
+          <a href="#"><i class="pi pi-instagram"></i></a>
+        </div>
+      </div>
+      <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" novalidate class="contact-form">
+        <div class="input-group">
+          <input type="text" id="name" formControlName="name" required placeholder="Name" autocomplete="off" />
+          <label for="name">Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" formControlName="email" required placeholder="Email" autocomplete="off" />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group textarea-group">
+          <textarea id="message" formControlName="message" required placeholder="Message" rows="5"></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <button type="submit" [disabled]="sending || contactForm.invalid" class="gradient-btn">
+          {{ sending ? "Sending..." : "Send Message" }}
+        </button>
+
+        <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
+        <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+      </form>
+    </div>
+  </section>
+</section>

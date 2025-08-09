@@ -1,11 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+@import "./assets/variables.scss";
+
+::-webkit-scrollbar {
+  background-color: $light-grey;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $green;
+  border-radius: 20px;
+  width: 5px;
+}
 
 .gradient-btn {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
   background: linear-gradient(10deg, #f2ff93, #48e4ec);
@@ -13,10 +25,18 @@
   font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1;
+  border: none;
 
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(172, 180, 255, 0.881);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(1);
+    box-shadow: none;
   }
 }
 

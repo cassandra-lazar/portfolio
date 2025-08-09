@@ -33,6 +33,7 @@ import { CopyToClipboardDirective } from './shared/directives/copy-to-clipboard.
 import { TitleComponent } from './shared/components/title/title.component';
 import { Timeline } from 'primeng/timeline';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const PRIME_MODULES = [
   ButtonModule,
@@ -71,6 +72,8 @@ const PRIME_MODULES = [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     ...PRIME_MODULES,
   ],
   exports: [CopyToClipboardDirective],
