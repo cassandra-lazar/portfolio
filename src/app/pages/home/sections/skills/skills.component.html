@@ -21,7 +21,13 @@
 
   <div class="skills-banner">
     <div class="slider">
-      <div class="slide-track">
+      <div
+        class="slide-track"
+        [class.pauseBanner]="pauseBanner"
+        [style.width.px]="slideTrackWidth"
+        (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()"
+      >
         @for (skill of allLogos; track skill.name) {
         <div class="slide">
           <img [src]="skill.logo" [alt]="skill.name" />

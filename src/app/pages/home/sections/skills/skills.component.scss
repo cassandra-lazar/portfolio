@@ -60,6 +60,10 @@
       display: flex;
       width: calc(200px * 20 * 2);
       animation: scroll 30s linear infinite;
+
+      &.pauseBanner {
+        animation-play-state: paused;
+      }
     }
 
     .slide {
