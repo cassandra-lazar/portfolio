@@ -43,8 +43,12 @@
           {{ sending ? "Sending..." : "Send Message" }}
         </button>
 
-        <p class="success-msg" *ngIf="successMessage">{{ successMessage }}</p>
-        <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+        @if (successMessage !== '') {
+          <p class="success-msg">{{ successMessage }}</p>
+        }
+        @if (errorMessage !== '') {
+          <p class="error-msg">{{ errorMessage }}</p>
+        }
       </form>
     </div>
   </section>

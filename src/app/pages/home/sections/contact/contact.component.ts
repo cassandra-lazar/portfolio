@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -8,84 +9,53 @@ import emailjs from '@emailjs/browser';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-
-//   const serviceID = 'service_y57gy5a';
-//   const templateID = 'template_ed2ga9q';
-//   const userID = 'qRoiYsoDIwvmFds2E';
 export class ContactComponent {
-  email = 'lazar.cassandra@gmail.com';
-
-  // name = '';
-  // email = '';
-  // message = '';
-  // sending = false;
-  // successMessage = '';
-  // errorMessage = '';
-
-  // sendEmail() {
-  //   if (!this.name || !this.email || !this.message) {
-  //     this.errorMessage = 'Please fill in all fields';
-  //     return;
-  //   }
-
-  //   this.sending = true;
-  //   this.errorMessage = '';
-  //   this.successMessage = '';
-
-  //   const templateParams = {
-  //     from_name: this.name,
-  //     from_email: this.email,
-  //     message: this.message,
-  //   };
-
-  //   emailjs
-  //     .send(
-  //       'YOUR_SERVICE_ID',
-  //       'YOUR_TEMPLATE_ID',
-  //       templateParams,
-  //       'YOUR_PUBLIC_KEY'
-  //     )
-  //     .then(
-  //       (response) => {
-  //         this.sending = false;
-  //         this.successMessage = 'Message sent successfully!';
-  //         this.name = '';
-  //         this.email = '';
-  //         this.message = '';
-  //       },
-  //       (error) => {
-  //         this.sending = false;
-  //         this.errorMessage = 'Failed to send message, please try again.';
-  //         console.error('EmailJS error:', error);
-  //       }
-  //     );
-  // }
-
-  contactForm: FormGroup;
+  contactForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required]),
+  });
   sending = false;
   successMessage = '';
   errorMessage = '';
+  envEmailJS = environment.emailJS;
+  email = 'lazar.cassandra@gmail.com';
 
-  constructor(private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
-    });
-  }
-
-  sendEmail() {
+  async sendEmail() {
     if (this.contactForm.invalid) return;
 
     this.sending = true;
-    this.successMessage = '';
     this.errorMessage = '';
+    this.successMessage = '';
 
-    // Simulare trimitere email
+    const templateParams = {
+      from_name: this.contactForm.value.name,
+      from_email: this.contactForm.value.email,
+      message: this.contactForm.value.message,
+    };
+
+    try {
+      await emailjs.send(
+        this.envEmailJS.serviceID,
+        this.envEmailJS.templateID,
+        templateParams,
+        this.envEmailJS.publicKey
+      );
+      this.successMessage = 'Message sent successfully!';
+      this.resetContactForm();
+    } catch (error) {
+      this.errorMessage = 'Failed to send message, please try again.';
+      this.resetContactForm();
+    }
+  }
+
+  resetContactForm() {
+    this.sending = false;
+    this.contactForm.reset();
+
     setTimeout(() => {
-      this.sending = false;
-      this.successMessage = 'Your message has been sent!';
-      this.contactForm.reset();
-    }, 1500);
+      this.successMessage = '';
+      this.errorMessage = '';
+    }, 3000);
   }
 }
