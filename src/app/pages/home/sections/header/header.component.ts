@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  activeSection: string = 'about';
+  activeSection: string = 'home';
 
   ngAfterViewInit() {
     const sections = document.querySelectorAll('section[id]');
@@ -25,7 +25,7 @@ export class HeaderComponent {
       },
       {
         rootMargin: '0px',
-        threshold: 0.5,
+        threshold: 0.3,
       }
     );
 
