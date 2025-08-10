@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production --base-href \"/portfolio/\" && rm -rf docs && mkdir docs && cp -r dist/portfolio/browser/* docs/ && cp docs/index.html docs/404.html && git add docs && git commit -m \"Deploy site\" && git push origin deploy"
   },
   "prettier": {
     "overrides": [
