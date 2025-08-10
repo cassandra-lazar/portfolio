@@ -1,4 +1,4 @@
-@use  "../../../../../assets/variables.scss" as *;
+@use "../../../../../assets/variables.scss" as *;
 
 .email {
   gap: 0.5rem;
@@ -26,7 +26,7 @@
     backdrop-filter: blur(20px);
 
     &:hover {
-      box-shadow: 0 0 25px #98ff98, 0 0 50px #98ff98;
+      box-shadow: 0 0 25px #98ff98, 0 0 30px #98ff98;
       &::before {
         opacity: 0.1;
       }
@@ -91,6 +91,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
     flex: 1 1 auto;
     padding: 2rem;
 
@@ -118,10 +120,11 @@
     }
 
     .social-icons {
-      margin-top: 0.5rem;
-
+      margin-top: 1.5rem;
+      .pi {
+        font-size: 1.7rem;
+      }
       a {
-        font-size: 2rem;
         margin-right: 1rem;
         color: #98ff98;
         transition: color 0.3s ease;
@@ -133,4 +136,3 @@
     }
   }
 }
-

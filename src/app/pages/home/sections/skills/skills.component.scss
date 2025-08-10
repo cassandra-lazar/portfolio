@@ -25,7 +25,8 @@
       gap: 0.5rem;
       transition: all 0.3s ease;
       min-width: 130px;
-
+      box-shadow: 0 0 20px rgba(152, 255, 152, 0.2);
+      border: 2px solid rgba(152, 255, 152, 0.2);
       img {
         width: 30px;
         height: 30px;
@@ -40,14 +41,14 @@
 
       &:hover {
         transform: translateY(-4px) scale(1.05);
-        box-shadow: 0 0 15px rgba(116, 255, 167, 0.6);
+        box-shadow: 0 0 20px #98ff98, 0 0 20px #98ff98;
       }
     }
   }
 }
 
 .skills-banner {
-  background: rgba(255, 255, 255, 0.02);
+  background: transparent;
   padding: 1.5rem 0;
   overflow: hidden;
   position: relative;

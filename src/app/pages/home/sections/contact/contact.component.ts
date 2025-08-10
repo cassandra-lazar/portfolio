@@ -20,7 +20,10 @@ export class ContactComponent {
   errorMessage = '';
   envEmailJS = environment.emailJS;
   email = 'lazar.cassandra@gmail.com';
-
+  location: string = 'Romania, Remote';
+  linkedinUrl: string = 'https://www.linkedin.com/in/cassandra-lazar-66077395/';
+  cvUrl: string = '/Cassandra-CV.pdf';
+  
   async sendEmail() {
     if (this.contactForm.invalid) return;
 
