@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/components/animated-background/animated-background.component.scss"],
+  "sourcesContent": [".vanta-background {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  z-index: -1;\r\n  pointer-events: none;\r\n  overflow: hidden;\r\n}\r\n"],
+  "mappings": "AAAA,CAAA,iBACE,SAAA,MACA,IAAA,EACA,KAAA,EACA,MAAA,MACA,OAAA,MACA,QAAA,GACA,eAAA,KACA,SAAA",
+  "names": []
+}
