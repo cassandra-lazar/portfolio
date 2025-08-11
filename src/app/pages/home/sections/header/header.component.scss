@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   position: fixed;
+  padding-top: 0;
   top: 0;
   left: 0;
   right: 0;
@@ -13,7 +14,7 @@
   gap: 1rem;
   background-color: #111;
   padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
+  border-radius: 10px;
   list-style: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -26,10 +27,6 @@
   border-radius: 1.5rem;
   transition: background 0.3s, color 0.3s;
   position: relative;
-
-  &:hover {
-    color: white;
-  }
 }
 
 .nav-list li a {
@@ -39,6 +36,6 @@
 
 .nav-list li.active {
   color: white;
-  background: radial-gradient(circle at bottom, #8039fb55, #00000000);
-  box-shadow: inset 0 0 0 #a100ff55, 0 0 10px #7f39fb;
+  background: radial-gradient(circle, #bb61ff, #00000000);
+  box-shadow: inset 0 0 0 #a100ff55, 0 0 5px #7f39fb;
 }
