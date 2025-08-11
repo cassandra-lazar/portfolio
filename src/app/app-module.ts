@@ -34,6 +34,7 @@ import { TitleComponent } from './shared/components/title/title.component';
 import { Timeline } from 'primeng/timeline';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImageModule } from 'primeng/image';
 
 const PRIME_MODULES = [
   ButtonModule,
@@ -50,7 +51,8 @@ const PRIME_MODULES = [
   RippleModule,
   ProgressBarModule,
   Timeline,
-  AnimateOnScrollModule 
+  AnimateOnScrollModule,
+  ImageModule
 ];
 
 @NgModule({

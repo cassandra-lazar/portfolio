@@ -1,1 +1,30 @@
-<p>projects works!</p>
+<section class="container mt-4 mb-5">
+  <div class="projects-section">
+    <ul class="project-tabs">
+      @for (project of projects; track $index) {
+      <li
+        (click)="selectProject(project)"
+        [class.active]="selectedProject.id === project.id"
+      >
+        {{ project.title }}
+      </li>
+      }
+    </ul>
+
+    <div class="project-content">
+      <h3 class="mb-4">{{ selectedProject.title }}</h3>
+      <p>{{ selectedProject.description }}</p>
+
+      @if (selectedProject.images?.length) {
+      <div class="project-images">
+        @for (img of selectedProject.images; track $index) {
+        <div class="thumbnail-wrapper" (click)="openPreview(img)">
+          <img [src]="img" alt="Project image" class="thumbnail" />
+          <span class="zoom-icon">🔍</span>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</section>
