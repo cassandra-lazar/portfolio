@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,20 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  mobile!: boolean;
   activeSection: string = 'home';
+  isMenuOpen = false;
+  menuItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
+  constructor(private displayService: DeviceDetectorService) {
+    this.mobile = this.displayService.isMobile();
+  }
 
   ngAfterViewInit() {
     const sections = document.querySelectorAll('section[id]');
@@ -30,5 +44,13 @@ export class HeaderComponent {
     );
 
     sections.forEach((section) => observer.observe(section));
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }
