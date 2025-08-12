@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/home.component.scss"],
+  "sourcesContent": ["section {\r\n  scroll-margin-top: 3.7rem;\r\n}"],
+  "mappings": "AAAA,QACE,kBAAA",
+  "names": []
+}
