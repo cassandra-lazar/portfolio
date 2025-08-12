@@ -9,20 +9,25 @@
         <div class="d-flex">
           <p><strong>Email:</strong></p>
           <div class="email">
-            {{ email }}
-            <span [appCopyToClipboard]="email"></span>
+            {{ socialInfo.EMAIL }}
+            <span [appCopyToClipboard]="socialInfo.EMAIL"></span>
           </div>
         </div>
-        <p><strong>Phone:</strong> +40 123 456 789</p>
-        <p><strong>Location:</strong> Bucharest, Romania</p>
-        <a [href]="cvUrl" download class="gradient-btn">
+        <p><strong>Phone:</strong> {{ socialInfo.TELEPHONE }}</p>
+        <p><strong>Location:</strong> {{ socialInfo.LOCATION }}</p>
+        <a [href]="socialInfo.CV" download class="gradient-btn">
           <i class="pi pi-download"></i> Download CV
         </a>
         <div class="social-icons">
-          <a href="#"><i class="pi pi-linkedin"></i></a>
-          <a href="#"><i class="pi pi-github"></i></a>
-          <a href="#"><i class="pi pi-facebook"></i></a>
-          <a href="#"><i class="pi pi-instagram"></i></a>
+          <a [href]="socialInfo.LINKEDIN" target="_blank"
+            ><i class="pi pi-linkedin"></i
+          ></a>
+          <a [href]="socialInfo.GITHUB" target="_blank"
+            ><i class="pi pi-github"></i
+          ></a>
+          <a [href]="socialInfo.INSTAGRAM" target="_blank"
+            ><i class="pi pi-instagram"></i
+          ></a>
         </div>
       </div>
 

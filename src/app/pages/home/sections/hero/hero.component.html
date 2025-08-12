@@ -1,19 +1,24 @@
 <section class="hero-container" data-aos="fade-down" data-aos-offset="200">
   <div class="hero-content">
     <h1 class="name">
-      {{ name }}
+      {{ socialInfo.NAME }}
     </h1>
-    <h2 class="role"><i class="pi pi-briefcase me-2"></i>{{ role }}</h2>
+    <h2 class="role">
+      <i class="pi pi-briefcase me-2"></i>{{ socialInfo.ROLE }}
+    </h2>
 
-    <p class="location"><i class="pi pi-map-marker"></i> {{ location }}</p>
-    <div class="email">{{ email }}
-      <span [appCopyToClipboard]="email"></span>
+    <p class="location">
+      <i class="pi pi-map-marker"></i> {{ socialInfo.LOCATION }}
+    </p>
+    <div class="email">
+      {{ socialInfo.EMAIL }}
+      <span [appCopyToClipboard]="socialInfo.EMAIL"></span>
     </div>
     <div class="d-flex justify-content-center flex-wrap gap-3">
-      <a [href]="linkedinUrl" target="_blank" class="linkedin-btn">
+      <a [href]="socialInfo.LINKEDIN" target="_blank" class="linkedin-btn">
         <i class="pi pi-linkedin"></i>
       </a>
-      <a [href]="cvUrl" download class="gradient-btn">
+      <a [href]="socialInfo.CV" download class="gradient-btn">
         <i class="pi pi-download"></i> Download CV
       </a>
     </div>
