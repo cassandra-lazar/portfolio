@@ -43,9 +43,12 @@
               }
             ],
             "styles": [
+              "node_modules/aos/dist/aos.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/bootstrap-overrides.scss",
-              "src/styles.scss"]
+              "src/styles.scss"
+            ],
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {
@@ -79,7 +82,6 @@
               "buildTarget": "portfolio:build:production"
             },
             "development": {
-              
               "buildTarget": "portfolio:build:development"
             }
           },

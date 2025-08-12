@@ -1,4 +1,4 @@
-<section class="container mt-5">
+<section class="container mt-5" data-aos="fade-down" data-aos-offset="250">
   <div class="text-center mb-5">
     <app-title>Skills</app-title>
   </div>
@@ -9,7 +9,7 @@
       <h3>{{ category.title }}</h3>
       <div class="skills-grid">
         @for (skill of category.items; track skill.name) {
-        <div class="skill-item">
+        <div class="skill-item" data-aos="flip-up" data-aos-offset="250">
           <img [src]="skill.logo" [alt]="skill.name" />
           <span>{{ skill.name }}</span>
         </div>
@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="skills-banner">
+<section class="skills-banner" data-aos="zoom-in" data-aos-offset="250">
   <div class="slider">
     <div
       class="slide-track"
