@@ -27,7 +27,6 @@ import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { AnimatedBackgroundComponent } from './shared/components/animated-background/animated-background.component';
-import { GlowCardComponent } from './shared/components/glow-card/glow-card.component';
 import { HeroComponent } from './pages/home/sections/hero/hero.component';
 import { CopyToClipboardDirective } from './shared/directives/copy-to-clipboard.directive';
 import { TitleComponent } from './shared/components/title/title.component';
@@ -52,7 +51,7 @@ const PRIME_MODULES = [
   ProgressBarModule,
   Timeline,
   AnimateOnScrollModule,
-  ImageModule
+  ImageModule,
 ];
 
 @NgModule({
@@ -65,7 +64,6 @@ const PRIME_MODULES = [
     ContactComponent,
     HeaderComponent,
     AnimatedBackgroundComponent,
-    GlowCardComponent,
     HeroComponent,
     CopyToClipboardDirective,
     TitleComponent,

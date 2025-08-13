@@ -1,59 +1,110 @@
-# Portfolio
+# 🚀 Cassandra Lazar - Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+A modern, responsive portfolio website built with Angular showcasing my skills, projects, and professional experience as a Frontend Developer.
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Interactive Components** - Dynamic project showcase and skills display
+- **Contact Form** - Integrated contact functionality with EmailJS
+- **Smooth Animations** - AOS (Animate On Scroll) library for engaging user experience
+- **Sections** - Home, About Me, Skills, Projects, and Contact
+- **Downloadable CV** - Direct access to professional resume
+- **Social Media Integration** - LinkedIn and GitHub links
+
+## 🛠️ Technologies Used
+
+### Frontend Framework
+- **Angular 20** - Latest version with modern development practices
+- **TypeScript** - Type-safe JavaScript development
+- **SCSS** - Advanced CSS preprocessing
+
+### UI Libraries & Components
+- **PrimeNG** - Rich UI component library
+- **Bootstrap 5** - Responsive grid system and utilities
+- **PrimeIcons** - Professional icon set
+
+### Animation & Effects
+- **AOS (Animate On Scroll)** - Smooth scroll animations
+- **Three.js** - 3D graphics and animations
+- **Vanta.js** - Animated backgrounds
+
+### Development Tools
+- **Angular CLI** - Development and build tools
+- **Jasmine & Karma** - Testing framework
+- **Prettier** - Code formatting
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+- Angular CLI
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/cassy27/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:4200`
+
+### Build Commands
+
+- **Development build**: `npm run build`
+- **Production build**: `npm run build --configuration production`
+- **Watch mode**: `npm run watch`
+- **Run tests**: `npm test`
+
+## 🚀 Deployment
+
+The project includes a deployment script for GitHub Pages:
 
 ```bash
-ng serve
+npm run deploy
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This will:
+1. Build the production version
+2. Copy files to the `docs/` folder
+3. Commit and push changes to the deploy branch
 
-## Code scaffolding
+## 🧪 Testing
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Run the test suite with:
 ```bash
-ng generate component component-name
+npm test
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The project uses:
+- **Jasmine** for test framework
+- **Karma** for test runner
+- **Angular Testing Utilities** for component testing
 
-```bash
-ng generate --help
-```
+## 📄 License
 
-## Building
+This project is private and proprietary.
 
-To build the project run:
+## 👤 Contact
 
-```bash
-ng build
-```
+- **Name**: Cassandra Lazar
+- **Role**: Frontend Developer
+- **Email**: lazar.cassandra@gmail.com
+- **Location**: Bucharest, Romania
+- **LinkedIn**: [Cassandra Lazar](https://www.linkedin.com/in/cassandra-lazar-66077395/)
+- **GitHub**: [cassy27](https://github.com/cassy27/portfolio)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
