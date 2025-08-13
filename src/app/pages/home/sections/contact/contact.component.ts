@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { environment } from '../../../../../environments/environment';
+import { SOCIAL_INFO } from '../../../../shared/constants/social-info.constant';
 
 @Component({
   selector: 'app-contact',
@@ -19,10 +20,7 @@ export class ContactComponent {
   successMessage = '';
   errorMessage = '';
   envEmailJS = environment.emailJS;
-  email = 'lazar.cassandra@gmail.com';
-  location: string = 'Romania, Remote';
-  linkedinUrl: string = 'https://www.linkedin.com/in/cassandra-lazar-66077395/';
-  cvUrl: string = '/Cassandra-CV.pdf';
+  socialInfo = SOCIAL_INFO;
   
   async sendEmail() {
     if (this.contactForm.invalid) return;

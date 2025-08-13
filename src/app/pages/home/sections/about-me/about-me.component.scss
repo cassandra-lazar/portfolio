@@ -2,17 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 
   @media (max-width: 600px) {
     flex-wrap: wrap-reverse;
     text-align: center;
+    gap: 2rem;
   }
 }
 
 .intro {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -27,7 +28,7 @@
     border-radius: 20px;
     border: 3px solid #98ff98;
     box-shadow: 0 0 20px #98ff9870;
-    animation: float 6s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
   }
 }
 
@@ -162,6 +163,7 @@
     margin-bottom: 2rem;
     padding: 1rem 1.5rem;
     border-right: 4px solid #98ff98;
+    border-left: 4px solid #98ff98;
 
     &:last-child {
       margin-bottom: 0;
@@ -170,7 +172,7 @@
     .header {
       display: flex;
       justify-content: space-between;
-      align-items: end;
+      align-items: start;
       flex-direction: column;
 
       .title {
@@ -178,7 +180,6 @@
         font-size: 1.3rem;
         font-weight: bold;
         margin: 0.2rem;
-        text-align: end;
       }
 
       .period {
@@ -192,7 +193,6 @@
         color: #e0e0e0;
         line-height: 1.6;
         font-size: 1rem;
-        text-align: end;
       }
     }
   }

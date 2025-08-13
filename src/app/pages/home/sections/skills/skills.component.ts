@@ -11,7 +11,7 @@ export class SkillsComponent {
   mobile!: boolean;
   skills = [
     {
-      title: '💻 Frontend Core',
+      title: '💻 Core Frontend',
       items: [
         { name: 'HTML', logo: 'images/html.png' },
         { name: 'CSS', logo: 'images/css.png' },
@@ -23,19 +23,19 @@ export class SkillsComponent {
       ],
     },
     {
-      title: '🎨 UI Frameworks & Libraries',
+      title: '⚛️ Frameworks & Libraries',
       items: [
         { name: 'Angular', logo: 'images/angular.png' },
+        { name: 'RxJS', logo: 'images/rxjs.png' },
         { name: 'PrimeNG', logo: 'images/primeng.png' },
         { name: 'PrimeFlex', logo: 'images/primeflex.jpg' },
         { name: 'Angular Material', logo: 'images/angular-material.png' },
         { name: 'Bootstrap', logo: 'images/bootstrap.png' },
         { name: 'Tailwind CSS', logo: 'images/tailwind.png' },
-        { name: 'RxJS', logo: 'images/rxjs.png' },
       ],
     },
     {
-      title: '🛠 Tools & Workflow',
+      title: '🛠 Tools & Platforms',
       items: [
         { name: 'Git', logo: 'images/git.png' },
         { name: 'GitHub', logo: 'images/github.png' },
@@ -46,7 +46,7 @@ export class SkillsComponent {
       ],
     },
     {
-      title: '🧪 Testing',
+      title: '🧪 Testing & QA',
       items: [
         { name: 'Jest', logo: 'images/jest.png' },
         { name: 'Karma', logo: 'images/karma.png' },
@@ -61,7 +61,6 @@ export class SkillsComponent {
       ],
     },
   ];
-
   allLogos: any = [];
   pauseBanner = false;
   slideTrackWidth: number = 0;

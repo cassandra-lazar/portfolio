@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
+  aboutMe = `I'm Cassandra Lazar, a frontend developer passionate about crafting intuitive and elegant user experiences using Angular and modern web technologies. I enjoy turning tricky problems into clear, simple code and building responsive, accessible interfaces that users love. I’m always learning and improving, aiming to deliver high-quality and scalable applications.`;
+
   education = [
     {
       year: '2019-2022',
@@ -29,21 +31,19 @@ export class AboutMeComponent {
     {
       title: 'Frontend Developer',
       period: 'Jan 2022 – Sep 2024',
-      description:
-        'Leading frontend modules in Angular, building reusable components, custom directives and maintaining design consistency.',
+      description: `Developed responsive web applications and websites using Angular, PrimeNG, and Material UI. Implemented both UI and complex frontend logic, collaborating with the design team for UX and with backend developers for API integration. Wrote unit tests to ensure code quality and delivered large-scale projects on time in a cross-functional team environment.`,
     },
 
     {
       title: 'Junior Frontend Developer',
       period: 'Oct 2020 – Jul 2022',
-      description:
-        'Built small modules in Angular, worked on responsive layouts, started using SCSS and animations.',
+      description: `Built and maintained features for websites and advanced web applications using HTML, CSS, and Angular. Worked on both UI and application logic, collaborating with designers and backend developers to deliver functional, high-quality solutions.`,
     },
+
     {
       title: 'Intern Developer',
       period: 'Jul 2020 – Oct 2020',
-      description:
-        'Introduced to Angular framework, helped with UI bugfixing and learned Git basics.',
+      description: `Assisted in implementing UI and frontend logic for websites and internal applications. Collaborated with developers and designers to deliver user-friendly, reliable features.`,
     },
   ];
 }

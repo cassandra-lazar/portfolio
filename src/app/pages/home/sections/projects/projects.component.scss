@@ -1,8 +1,6 @@
 .projects-section {
   display: flex;
   justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 2rem;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
@@ -13,7 +11,7 @@
   color: #fff;
 
   &:hover {
-    box-shadow: 0 0 25px #98ff98, 0 0 50px #98ff98;
+    box-shadow: 0 0 25px #98ff98, 0 0 25px #98ff98;
 
     &::before {
       opacity: 0.1;
@@ -23,6 +21,15 @@
   @media (max-width: 1000px) {
     gap: 0rem;
     padding: 1rem;
+    flex-wrap: wrap;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(152, 255, 152, 0.2);
+
+      &::before {
+        opacity: 0.1;
+      }
+    }
   }
 }
 
@@ -53,7 +60,7 @@
 
   &.active {
     background-color: rgba(255, 255, 255, 0.1);
-    border-left: 3px solid #00ff88;
+    border-left: 4px solid #00ff88;
     font-weight: bold;
   }
 }
@@ -73,6 +80,7 @@
 
 .thumbnail {
   width: 8rem;
+  max-height: 4rem;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease;
@@ -96,4 +104,10 @@
 
 .thumbnail-wrapper:hover .zoom-icon {
   opacity: 1;
+}
+
+.subtitle {
+  text-decoration: underline;
+  text-decoration-color: #00ff88;
+  text-decoration-thickness: 2px;
 }

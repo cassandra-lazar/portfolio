@@ -1,10 +1,14 @@
-<section class="container mt-4 mb-5" data-aos="fade-down-right" data-aos-offset="250">
+<section
+  class="container mt-4 mb-5"
+  data-aos="fade-down-right"
+  data-aos-offset="200"
+>
   <div class="text-start mb-4">
     <app-title>Projects</app-title>
   </div>
 
   <div class="projects-section">
-    <ul class="project-tabs">
+    <ul class="project-tabs col-md-3">
       @for (project of projects; track $index) {
       <li
         (click)="selectProject(project)"
@@ -15,8 +19,8 @@
       }
     </ul>
 
-    <div class="project-content">
-      <h3 class="mb-4">{{ selectedProject.title }}</h3>
+    <div class="project-content col-md-9">
+      <h3 class="mb-4 subtitle">{{ selectedProject.title }}</h3>
       <p>{{ selectedProject.description }}</p>
 
       @if (selectedProject.images?.length) {
