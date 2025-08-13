@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ImagePreviewService } from '../../../../shared/services/image-preview.service';
+import { Project } from '../../../../shared/interfaces/project.interface';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +9,7 @@ import { ImagePreviewService } from '../../../../shared/services/image-preview.s
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projects: any[] = [
+  projects: Project[] = [
     {
       id: '1',
       title: 'Store Management',
@@ -54,19 +55,14 @@ export class ProjectsComponent {
   ];
   constructor(private previewService: ImagePreviewService) {}
 
-  selectedProject: any = this.projects[0];
+  selectedProject: Project = this.projects[0];
+  previewImage: string | null = null;
 
-  selectProject(project: any) {
+  selectProject(project: Project) {
     this.selectedProject = project;
   }
 
-  previewImage: string | null = null;
-
-  // openPreview(img: string) {
-  //   this.previewImage = img;
-  // }
-
-  closePreview() {
+  closePreview(): void {
     this.previewImage = null;
   }
   openPreview(img: string) {
