@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Education } from '../../../../shared/interfaces/education.interface';
+import { Experience } from '../../../../shared/interfaces/experience.interface';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  aboutMe = `I'm Cassandra Lazar, a frontend developer passionate about crafting intuitive and elegant user experiences using Angular and modern web technologies. I enjoy turning tricky problems into clear, simple code and building responsive, accessible interfaces that users love. I’m always learning and improving, aiming to deliver high-quality and scalable applications.`;
-
-  education = [
+  education: Education[] = [
     {
       year: '2019-2022',
       title: 'Titu Maiorescu University, Bucharest',
@@ -27,7 +27,8 @@ export class AboutMeComponent {
     },
   ];
 
-  experience = [
+  company = 'Mindit.io, Romania';
+  experience: Experience[] = [
     {
       title: 'Frontend Developer',
       period: 'Jan 2022 – Sep 2024',

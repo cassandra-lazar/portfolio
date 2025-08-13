@@ -82,8 +82,11 @@
     .timeline-content {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
-      border-left: 3px solid #98ff98;
-      padding: 1.5rem;
+      border-left: 2px solid #98ff98;
+      border-right: 2px solid rgba(152, 255, 152, 0.2);
+      border-top: 2px solid rgba(152, 255, 152, 0.2);
+      border-bottom: 2px solid rgba(152, 255, 152, 0.2);
+      padding: 1.2rem;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(152, 255, 152, 0.2);
 
@@ -104,13 +107,13 @@
         margin-bottom: 0.5rem;
       }
 
-      h3 {
-        font-size: 1.4rem;
+      .timeline-title {
+        font-size: 1.2rem;
         margin-bottom: 0.3rem;
         color: #fff;
       }
 
-      p {
+      .timeline-description {
         font-size: 1rem;
         color: #e0e0e0;
         margin: 0;
@@ -132,7 +135,7 @@
 }
 
 .experience-section {
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
 .experience-box {
@@ -153,14 +156,17 @@
   }
 
   .company-name {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #fff;
     margin-bottom: 2rem;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #8ff2ff;
+    text-decoration-thickness: 2px;
   }
 
   .experience-role {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
     padding: 1rem 1.5rem;
     border-right: 4px solid #98ff98;
     border-left: 4px solid #98ff98;
@@ -186,13 +192,14 @@
         font-size: 0.95rem;
         color: #98ff98;
         font-weight: bold;
+        margin: 0.2rem;
       }
 
       .description {
-        margin-top: 0.5rem;
         color: #e0e0e0;
         line-height: 1.6;
         font-size: 1rem;
+        margin: 0.6rem 0.2rem;
       }
     }
   }

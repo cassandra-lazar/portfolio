@@ -33,9 +33,9 @@
       @for (edu of education; track edu.title) {
       <div class="timeline-item" data-aos="flip-up" data-aos-offset="200">
         <div class="timeline-content">
-          <h3>{{ edu.title }}</h3>
+          <h3 class="timeline-title">{{ edu.title }}</h3>
           <span class="timeline-date">{{ edu.year }}</span>
-          <p>{{ edu.description }}</p>
+          <p class="timeline-description">{{ edu.description }}</p>
         </div>
       </div>
       }
@@ -51,14 +51,16 @@
       <app-title>Experience</app-title>
     </div>
     <div class="experience-box">
-      <h2 class="company-name">🏢 Mindit</h2>
-      <div class="experience-role" *ngFor="let role of experience">
+      <h2 class="company-name">{{ company }}</h2>
+      @for (role of experience; track $index) {
+      <div class="experience-role">
         <div class="header">
           <h3 class="title">{{ role.title }}</h3>
           <span class="period">{{ role.period }}</span>
           <p class="description">{{ role.description }}</p>
         </div>
       </div>
+      }
     </div>
   </section>
 </section>

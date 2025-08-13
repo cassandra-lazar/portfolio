@@ -1,4 +1,4 @@
-@use  "../../../../../assets/variables.scss" as *;
+@use "../../../../../assets/variables.scss" as *;
 
 .hero-container {
   height: 100vh;
@@ -36,11 +36,15 @@
 }
 
 .name {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 2rem;
   text-align: center;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 3rem;
+  }
 }
 
 .role {
@@ -48,12 +52,16 @@
   color: $blue;
   margin-bottom: 0.5rem;
   text-align: center;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 1.3rem;
+  }
 }
 
 .location {
   font-size: 1rem;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
@@ -63,7 +71,7 @@
   justify-content: center;
   flex-direction: row-reverse;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
   color: #ffffff;
   cursor: pointer;

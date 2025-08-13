@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
+import {
+  Skill,
+  SkillItem,
+} from '../../../../shared/interfaces/skill.interface';
 
 @Component({
   selector: 'app-skills',
@@ -8,8 +11,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  mobile!: boolean;
-  skills = [
+  skills: Skill[] = [
     {
       title: '💻 Core Frontend',
       items: [
@@ -61,13 +63,10 @@ export class SkillsComponent {
       ],
     },
   ];
-  allLogos: any = [];
+  allLogos: SkillItem[] = [];
   pauseBanner = false;
-  slideTrackWidth: number = 0;
+  slideTrackWidth = 0;
   slideWidth = 200;
-  constructor(private displayService: DeviceDetectorService) {
-    this.mobile = this.displayService.isMobile();
-  }
 
   ngOnInit() {
     this.allLogos = this.extractLogos();
@@ -78,11 +77,11 @@ export class SkillsComponent {
     return this.skills.flatMap((logo) => logo.items);
   }
 
-  onMouseEnter() {
+  onMouseEnter(): void {
     this.pauseBanner = true;
   }
 
-  onMouseLeave() {
+  onMouseLeave(): void {
     this.pauseBanner = false;
   }
 }

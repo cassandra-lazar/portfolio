@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { MENU_ITEMS } from '../../../../shared/constants/menu-items.constant';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,9 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class HeaderComponent {
   mobile!: boolean;
-  activeSection: string = 'home';
+  menuItems = MENU_ITEMS;
+  activeSection: string = MENU_ITEMS[0].id;
   isMenuOpen = false;
-  menuItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
-  ];
 
   constructor(private displayService: DeviceDetectorService) {
     this.mobile = this.displayService.isMobile();
@@ -46,11 +41,11 @@ export class HeaderComponent {
     sections.forEach((section) => observer.observe(section));
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.isMenuOpen = false;
   }
 }
