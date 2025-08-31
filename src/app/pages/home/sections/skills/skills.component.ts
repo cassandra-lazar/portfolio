@@ -37,14 +37,14 @@ export class SkillsComponent {
       ],
     },
     {
-      title: '🛠 Tools & Platforms',
+      title: '🛠 Development Tools & Platforms',
       items: [
         { name: 'Git', logo: 'images/git.png' },
         { name: 'GitHub', logo: 'images/github.png' },
         { name: 'npm', logo: 'images/npm.png' },
-        { name: 'Node.js', logo: 'images/nodejs.png' },
         { name: 'Postman', logo: 'images/postman.png' },
         { name: 'WordPress', logo: 'images/wordpress.png' },
+        { name: 'Strapi', logo: 'images/strapi.png' },
       ],
     },
     {
