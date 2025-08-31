@@ -46,7 +46,7 @@ A modern, responsive portfolio website built with Angular showcasing my skills, 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/cassy27/portfolio.git
+   git clone https://github.com/cassandra-lazar/portfolio.git
    cd portfolio
    ```
 
@@ -105,6 +105,6 @@ This project is private and proprietary.
 - **Role**: Frontend Developer
 - **Email**: lazar.cassandra@gmail.com
 - **Location**: Bucharest, Romania
-- **LinkedIn**: [Cassandra Lazar](https://www.linkedin.com/in/cassandra-lazar-66077395/)
-- **GitHub**: [cassy27](https://github.com/cassy27/portfolio)
+- [**LinkedIn**](https://www.linkedin.com/in/cassandra-lazar-66077395/)
+- [**GitHub**](https://github.com/cassandra-lazar/portfolio)
 
